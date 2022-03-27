@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/famiy_tree/static/css/main.073c9b0a.css",
+    "main.js": "/famiy_tree/static/js/main.10d8d259.js",
+    "index.html": "/famiy_tree/index.html",
+    "main.073c9b0a.css.map": "/famiy_tree/static/css/main.073c9b0a.css.map",
+    "main.10d8d259.js.map": "/famiy_tree/static/js/main.10d8d259.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.10d8d259.js"
+  ]
+}
