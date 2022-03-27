@@ -1,13 +1,18 @@
 import React,{useEffect, useState} from 'react'
 import AddMember from './AddMember'
-import { db } from './firebase';
-import { collection, getDocs} from 'firebase/firestore'
+import db from './firebase';
+import { collection, getDocs, docs, onSnapshot, query} from 'firebase/firestore'
 import List from './List'
 
 const Main = () => {
     const [users, setUsers] = useState([]);
     
     useEffect(()=>{
+        // const q = query(collection(db, "family-db"));
+        // onSnapshot(q, (spanshot)=> {
+        //     const users= spanshot.docs.map((doc) => ({...doc.data(), id:doc.id}));
+        //     setUsers(users)
+        // })
         const q = collection(db, "family-db");
         const getUsers = async()=>{
             const data = await getDocs(q);
