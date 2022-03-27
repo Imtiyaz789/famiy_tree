@@ -15,7 +15,7 @@ const Main = () => {
             setUsers(data.docs.map((doc)=>({...doc.data(), id:doc.id})));
         } 
         getUsers();
-      }, [users]);
+      }, []);
       
     // const handleEdit = async (name,age, title) => {
     //     await updateDoc(doc(db, "family-db"), {title : title});
@@ -30,7 +30,7 @@ const Main = () => {
                 <h1>Family's Tree</h1>
             </div>
         </div>
-        <div className='row border  border-light rounded p-3 mt-5 text-center'>
+        <div className='row border bg-secondary text-white border-light rounded p-3 mt-5 text-center'>
             <div className='col text-light'>
                 <h3>Name</h3>
             </div>
@@ -41,7 +41,7 @@ const Main = () => {
                 <h3>Age</h3>
             </div>
             <div className='col text-light'>
-                <h3>Phone Number</h3>
+                <h3>Phone</h3>
             </div>
             <div className='col text-light'>
                 <h3>Relationship</h3>

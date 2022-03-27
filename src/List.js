@@ -13,7 +13,7 @@ const List = (user) => {
     // console.log(name,user.data);
   return (
     <div>
-         <div className='row border  border-light rounded p-3 mt-5 text-center'>
+         <div className='row border bg-info bg-gradient text-dark border-light rounded p-3 mt-5 text-center'>
             <div className='col text-light'>
                 <h3>{name}</h3>
             </div>
@@ -29,8 +29,8 @@ const List = (user) => {
             <div className='col text-light'>
                 <h3>{relation}</h3>
             </div>
-            <div className='col text-light'>
-                <button onClick={()=> {handleDelete(user.id)}}>delete</button>
+            <div className='col text-light '>
+                <button className='btn btn-danger' onClick={()=> {handleDelete(user.id)}}>delete</button>
             </div>
         </div>
     </div>

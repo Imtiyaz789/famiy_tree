@@ -10,7 +10,7 @@ const AddMember = () => {
     const [relation, setRelation] = useState('');
 
     const handleSubmit = async () => {
-        // e.preventDefault();
+       
         
             await addDoc(collection(db, "family-db"),{
                 name:name,
@@ -19,30 +19,30 @@ const AddMember = () => {
                 phone:phone,
                 relation:relation
             });
-            // console.log(age)
+            
     };    
   return (
     <div className='container mt-5 m'>
         
             <div className='m-3' >
                 <input 
-                    type='text' placeholder='Enter Name' value={name} onChange={(e) => {setName(e.target.value);}}
+                    type='text' className='d-inline m-3 p2' placeholder='Enter Name' required onChange={(e) => {setName(e.target.value);}}
                 />
                 <input 
-                    type='text' placeholder='Enter Gender' value={gender} onChange={(e) => {setGender(e.target.value)}}
+                    type='text' className='d-inline m-3 p2' placeholder='Enter Gender' required onChange={(e) => {setGender(e.target.value)}}
                 />
                 <input 
-                    type='number' placeholder='Enter Age' value={age} onChange={(e) => {setAge(e.target.value)}}
+                    type='number' className='d-inline m-3 p2' placeholder='Enter Age' max='3' required onChange={(e) => {setAge(e.target.value)}}
                 />
                 <input 
-                    type='number' placeholder='Enter Phone' value={phone} onChange={(e) => {setPhone(e.target.value)}}
+                    type='number' className='d-inline m-3 p2' placeholder='Enter Phone' maxLength='10' required onChange={(e) => {setPhone(e.target.value)}}
                 />
                 <input 
-                    type='text' placeholder='Enter Relation' value={relation} onChange={(e) => {setRelation(e.target.value)}}
+                    type='text' className='d-inline m-3 p2 ' placeholder='Enter Relation' required  onChange={(e) => {setRelation(e.target.value)}}
                 />
             </div>
             <div className='btn_container'>
-                <button onClick={handleSubmit}>Add</button>
+                <button className='btn btn-outline-success' onSubmit={handleSubmit}>Add</button>
             </div>
             <hr/>
         
