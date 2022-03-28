@@ -1,13 +1,13 @@
 import React from 'react'
 import db from './firebase';
 import { doc, deleteDoc } from 'firebase/firestore';
-const List = (user) => {
+const List = (user,id) => {
 
     const {name, gender, age, phone, relation} = user.data;
     // const handleEdit = async (todo, title) => {
     //     await updateDoc(doc(db, "todos", todo.id), {title : title});
     //   }
-    const handleDelete = async (id) => {
+    const handleDelete = async () => {
         await deleteDoc(doc(db, "family-db", id));
     } 
     // console.log(name,user.data);
@@ -30,7 +30,7 @@ const List = (user) => {
                 <h3>{relation}</h3>
             </div>
             <div className='col text-light '>
-                <button className='btn btn-danger' onClick={()=> {handleDelete(user.id)}}>delete</button>
+                <button className='btn btn-danger' onClick={handleDelete}>delete</button>
             </div>
         </div>
     </div>

@@ -16,7 +16,7 @@ const AddMember = () => {
             age:age,
             phone:phone,
             relation:relation
-        });   
+        })  
     };    
   return (
     <div className='container mt-5 m'>
@@ -39,7 +39,7 @@ const AddMember = () => {
                 />
             </div>
             <div className='btn_container'>
-                <button className='btn btn-outline-success' onClick={handleSubmit}>Add</button>
+                <button className='btn btn-outline-success' onClick={()=> handleSubmit()}>Add</button>
             </div>
             <hr/>
         
